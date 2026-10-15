@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bespoke Vehicle Builds & Styling | Autoluxe Automotive</title>
+  <meta name="description" content="A luxury automotive atelier for bespoke styling, performance and craftsmanship — one-off Defender, G63, Range Rover, Urus and 911 builds.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0C0C0C',
+              dark: '#141414',
+              gold: '#C5A064',
+              wine: '#410306',
+              cream: '#F2F1ED'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0C0C0C; color: #F2F1ED; font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .font-heading { font-family: 'Playfair Display', Georgia, serif; }
+    .btn-luxury {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 2.2rem;
+      background: rgba(12, 12, 12, 0.75);
+      border: 1px solid rgba(242, 241, 237, 0.2);
+      backdrop-filter: blur(12px);
+      color: #F2F1ED;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+    .btn-luxury:hover {
+      border-color: rgba(242, 241, 237, 0.6);
+      background: rgba(242, 241, 237, 0.08);
+      transform: translateY(-2px);
+    }
+    .btn-luxury-solid {
+      background: #F2F1ED;
+      color: #0C0C0C;
+      border: 1px solid #F2F1ED;
+    }
+    .btn-luxury-solid:hover {
+      background: #ffffff;
+      color: #000000;
+      box-shadow: 0 0 25px rgba(242, 241, 237, 0.3);
+      transform: translateY(-2px);
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#0C0C0C] text-[#F2F1ED] overflow-x-hidden selection:bg-[#F2F1ED] selection:text-[#410306]">
+
+  <!-- Top Floating Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0C0C0C]/90 backdrop-blur-md border-b border-white/5 py-4 px-6 sm:px-12 flex items-center justify-between">
+    <div className="flex items-center gap-4">
+      <span class="text-[10px] uppercase font-mono tracking-widest text-white/50 hidden md:inline">Atelier UK</span>
+    </div>
+
+    <a href="#" onclick="switchTab('home')" class="flex items-center gap-3 group">
+      <svg class="w-8 h-8 text-[#F2F1ED]" viewBox="0 0 60 60" fill="none">
+        <path d="M30 4L4 52H18L30 26L42 52H56L30 4Z" fill="currentColor"/>
+        <path d="M19 38H41V42H19V38Z" fill="#C5A064"/>
+      </svg>
+      <div class="flex flex-col text-left">
+        <span class="font-serif tracking-[0.3em] text-lg font-bold uppercase text-white group-hover:text-[#C5A064] transition-colors">
+          AUTOLUXE
+        </span>
+        <span class="text-[8px] uppercase tracking-[0.4em] text-white/40 -mt-1 font-mono">
+          Automotive
+        </span>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      <button onclick="switchTab('home')" class="nav-item text-xs uppercase tracking-widest text-[#C5A064] transition-colors" data-target="home">Home</button>
+      <button onclick="switchTab('builds')" class="nav-item text-xs uppercase tracking-widest text-white/70 hover:text-white transition-colors" data-target="builds">Builds</button>
+      <button onclick="switchTab('stock')" class="nav-item text-xs uppercase tracking-widest text-white/70 hover:text-white transition-colors" data-target="stock">Stock</button>
+      <button onclick="switchTab('services')" class="nav-item text-xs uppercase tracking-widest text-white/70 hover:text-white transition-colors" data-target="services">Services</button>
+      <button onclick="switchTab('contact')" class="nav-item text-xs uppercase tracking-widest text-white/70 hover:text-white transition-colors" data-target="contact">Contact</button>
+      <a href="tel:+443330417965" class="border border-white/15 px-3 py-1 font-mono text-[11px] text-white/80 hover:text-white hover:border-[#C5A064] transition-all">
+        +44 (0) 3330 417 965
+      </a>
+    </nav>
+  </header>
+
+  <!-- Content Container -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
+      <div class="absolute inset-0 z-0">
+        <img src="https://cdn.forgeautomotive.media/images/ed72g2cx/production/35c93330a1cd16aa426b7bded4ad225113f7b6db-3840x2160.png?auto=format&fit=max&w=2400" alt="Autoluxe Bespoke Vehicle" class="w-full h-full object-cover object-center brightness-60">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0C0C0C] via-[#0C0C0C]/80 to-[#0C0C0C]/50"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-white/10 bg-white/[0.03] backdrop-blur-md mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#C5A064]"></span>
+          <span class="text-[11px] uppercase tracking-[0.3em] text-[#F2F1ED]/80 font-mono">
+            Autoluxe Atelier • Bespoke Builds
+          </span>
+        </div>
+
+        <p class="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#C5A064] mb-3 font-semibold">
+          We don’t modify vehicles, we build them for you.
+        </p>
+
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight text-[#F2F1ED] leading-[1.08] mb-6 max-w-4xl">
+          For Those Who <br>
+          <span class="italic font-light text-white/95">Refuse Ordinary</span>
+        </h1>
+
+        <p class="text-sm sm:text-base md:text-lg text-[#F2F1ED]/70 font-light max-w-2xl leading-relaxed mb-10">
+          A luxury automotive atelier for bespoke styling, performance and craftsmanship — one-off Defender, G63, Range Rover, Urus and 911 builds.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+          <button onclick="switchTab('contact')" class="btn-luxury btn-luxury-solid">
+            Start Your Project &rarr;
+          </button>
+          <button onclick="switchTab('builds')" class="btn-luxury">
+            Explore Builds
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Brands Ribbon -->
+    <div class="py-8 bg-[#0C0C0C] border-y border-white/5 overflow-hidden relative">
+      <div class="animate-marquee space-x-12 items-center">
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Aston Martin</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Porsche</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Lamborghini</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Land Rover Defender</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Bentley</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Rolls-Royce</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Mercedes-AMG</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Ferrari</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">McLaren</span><span class="text-[#C5A064]">◆</span>
+        <!-- Duplicated for seamless loop -->
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Aston Martin</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Porsche</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Lamborghini</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Land Rover Defender</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Bentley</span><span class="text-[#C5A064]">◆</span>
+        <span class="text-xs font-serif uppercase tracking-[0.3em] text-white/40">Rolls-Royce</span><span class="text-[#C5A064]">◆</span>
+      </div>
+    </div>
+
+    <!-- Philosophy -->
+    <section class="py-24 bg-[#0C0C0C] border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-16">
+          <span class="text-xs uppercase font-mono tracking-[0.25em] text-[#C5A064] block mb-3">Atelier Methodology</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-4">Our Approach To Every Build</h2>
+          <p class="text-white/60 font-light">Every decision is intentional, every detail has purpose based on your taste, your lifestyle, and your standards.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-3xl text-[#C5A064] mb-4 block">01</span>
+              <h3 class="font-serif text-2xl text-white mb-3">Identity</h3>
+              <p class="text-xs text-white/60 leading-relaxed font-light">Every build begins with the person behind the wheel, shaped around their individual taste, lifestyle, presence and personal sense of identity on the road.</p>
+            </div>
+            <button onclick="switchTab('contact')" class="text-xs uppercase tracking-widest text-[#C5A064] mt-6 text-left">Start Your Project &rarr;</button>
+          </div>
+          <div class="p-8 bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-3xl text-[#C5A064] mb-4 block">02</span>
+              <h3 class="font-serif text-2xl text-white mb-3">Insight</h3>
+              <p class="text-xs text-white/60 leading-relaxed font-light">Exterior, interior and performance are brought together through a considered, detail-led approach, creating one complete and fully resolved vision.</p>
+            </div>
+            <button onclick="switchTab('contact')" class="text-xs uppercase tracking-widest text-[#C5A064] mt-6 text-left">Start Your Project &rarr;</button>
+          </div>
+          <div class="p-8 bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+            <div>
+              <span class="font-serif text-3xl text-[#C5A064] mb-4 block">03</span>
+              <h3 class="font-serif text-2xl text-white mb-3">Cohesion</h3>
+              <p class="text-xs text-white/60 leading-relaxed font-light">Every modification is chosen with precision, ensuring each detail adds purpose, balance and distinction to the final bespoke automotive build.</p>
+            </div>
+            <button onclick="switchTab('contact')" class="text-xs uppercase tracking-widest text-[#C5A064] mt-6 text-left">Start Your Project &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24 bg-[#0E0E0E] border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-16">
+          <span class="text-xs uppercase font-mono tracking-[0.25em] text-[#C5A064] block mb-3">Services</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-4">A vehicle should say something before it moves.</h2>
+          <p class="text-white/60 font-light">From exterior styling and interior refinement to performance upgrades, detailing and bespoke finishes; each detail sharpens the vehicle’s character without overpowering it.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 bg-[#141414] border border-white/10">
+            <span class="text-[10px] font-mono text-[#C5A064] tracking-widest uppercase">Service 01</span>
+            <h3 class="font-serif text-2xl text-white mt-2 mb-3">Bodystyling</h3>
+            <p class="text-xs text-white/60 leading-relaxed font-light">From aero styling to carbon details and exterior refinement, bodywork is designed to change the vehicle’s presence without compromising its original character.</p>
+          </div>
+          <div class="p-6 bg-[#141414] border border-white/10">
+            <span class="text-[10px] font-mono text-[#C5A064] tracking-widest uppercase">Service 02</span>
+            <h3 class="font-serif text-2xl text-white mt-2 mb-3">Interior</h3>
+            <p class="text-xs text-white/60 leading-relaxed font-light">Material, stitching, trim and finish are selected to create an interior that feels personal, tactile and composed. We turn the cabin into a space of identity, comfort and control.</p>
+          </div>
+          <div class="p-6 bg-[#141414] border border-white/10">
+            <span class="text-[10px] font-mono text-[#C5A064] tracking-widest uppercase">Service 03</span>
+            <h3 class="font-serif text-2xl text-white mt-2 mb-3">Wheels</h3>
+            <p class="text-xs text-white/60 leading-relaxed font-light">Bespoke wheel upgrades designed to enhance stance, proportion and road presence, with fitments selected to complement the vehicle’s character and performance.</p>
+          </div>
+          <div class="p-6 bg-[#141414] border border-white/10">
+            <span class="text-[10px] font-mono text-[#C5A064] tracking-widest uppercase">Service 04</span>
+            <h3 class="font-serif text-2xl text-white mt-2 mb-3">Lighting</h3>
+            <p class="text-xs text-white/60 leading-relaxed font-light">Lighting gives a vehicle its expression. From subtle tinting to signature illumination and refined visual details, we use light to sharpen character, presence and atmosphere.</p>
+          </div>
+          <div class="p-6 bg-[#141414] border border-white/10">
+            <span class="text-[10px] font-mono text-[#C5A064] tracking-widest uppercase">Service 05</span>
+            <h3 class="font-serif text-2xl text-white mt-2 mb-3">Exhaust</h3>
+            <p class="text-xs text-white/60 leading-relaxed font-light">Exhaust upgrades are chosen for tone, response and presence. Not noise for the sake of noise, but a sound profile that gives the vehicle more character and depth.</p>
+          </div>
+          <div class="p-6 bg-[#141414] border border-white/10">
+            <span class="text-[10px] font-mono text-[#C5A064] tracking-widest uppercase">Service 06</span>
+            <h3 class="font-serif text-2xl text-white mt-2 mb-3">Protection</h3>
+            <p class="text-xs text-white/60 leading-relaxed font-light">Paint protective film solutions that preserve the finish of the vehicle while allowing for satin finishes, coloured films and full visual transformation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Builds -->
+    <section class="py-24 bg-[#0C0C0C] border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-16">
+          <div>
+            <span class="text-xs uppercase font-mono tracking-[0.25em] text-[#C5A064] block mb-3">Portfolio</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal">Previous Builds</h2>
+            <p class="text-white/60 font-light mt-3">A collection of previous bespoke builds, shaped by craft and character.</p>
+          </div>
+          <button onclick="switchTab('builds')" class="hidden sm:inline btn-luxury text-xs">View All Builds &rarr;</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[#141414] border border-white/10 overflow-hidden group">
+            <div class="aspect-[16/10] bg-black overflow-hidden relative">
+              <img src="https://cdn.forgeautomotive.media/images/ed72g2cx/production/cacd4aeb9397b9f5f2ef6774cf882ed0df7369e4-2880x1800.jpg?auto=format&fit=max&w=1200" alt="Defender 110" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-black/80 px-2.5 py-1 font-mono text-xs text-[#C5A064] border border-white/10">#AL001</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-serif text-2xl text-white mb-2">Defender 110</h3>
+              <p class="text-xs text-white/60 font-light leading-relaxed mb-4">Satin grey against gloss black, widened arches and a stance built to be noticed.</p>
+              <button onclick="openModal('Defender 110', '#AL001', 'Satin Carpathian Grey with Piano Gloss Black upper', '23-inch Dual-tone Forged Alloy', 'Quad-exit valved stainless sport exhaust')" class="text-xs uppercase tracking-widest text-[#C5A064]">View Build Details &rarr;</button>
+            </div>
+          </div>
+
+          <div class="bg-[#141414] border border-white/10 overflow-hidden group">
+            <div class="aspect-[16/10] bg-black overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1200&q=85" alt="911 Carrera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-black/80 px-2.5 py-1 font-mono text-xs text-[#C5A064] border border-white/10">#AL002</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-serif text-2xl text-white mb-2">911 Carrera</h3>
+              <p class="text-xs text-white/60 font-light leading-relaxed mb-4">Satin black from crest to calliper, with every brightwork detail taken out of the picture.</p>
+              <button onclick="openModal('911 Carrera', '#AL002', 'Obsidian Deep Satin Black with carbon splitter', '20/21-inch Centre-lock Staggered Forged Monoblock', 'Inconel lightweight race exhaust')" class="text-xs uppercase tracking-widest text-[#C5A064]">View Build Details &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available Stock -->
+    <section class="py-24 bg-[#0E0E0E] border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-16">
+          <span class="text-xs uppercase font-mono tracking-[0.25em] text-[#C5A064] block mb-3">Showroom</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-4">Available Stock</h2>
+          <p class="text-white/60 font-light">Builds available for purchase, refined with intent, engineered with purpose, and ready to make a statement.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[#141414] border border-white/10 overflow-hidden">
+            <div class="aspect-[16/10] bg-black overflow-hidden relative">
+              <img src="https://cdn.forgeautomotive.media/images/ed72g2cx/production/eea7e8f712d23f964959ef835e6e4697b4d1234c-2880x1800.jpg?auto=format&fit=max&w=1200" alt="Range Rover D300" class="w-full h-full object-cover">
+              <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
+                <span class="bg-black/80 px-2.5 py-1 font-mono text-xs text-[#C5A064] border border-white/10">#AL003</span>
+                <span class="bg-emerald-950 text-emerald-300 border border-emerald-500/30 px-2.5 py-1 font-mono text-[10px] uppercase">Available Now</span>
+              </div>
+              <span class="absolute bottom-4 left-4 font-serif text-2xl font-bold text-white bg-black/70 px-3 py-1">£88,595</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-serif text-2xl text-white mb-2">Range Rover D300</h3>
+              <p class="text-xs text-white/60 font-light leading-relaxed mb-4">Satin protection, sculpted carbon and 24-inch forged alloys for undeniable road presence.</p>
+              <button onclick="switchTab('contact')" class="btn-luxury btn-luxury-solid text-xs py-2 px-5">Inquire on Stock</button>
+            </div>
+          </div>
+
+          <div class="bg-[#141414] border border-white/10 overflow-hidden">
+            <div class="aspect-[16/10] bg-black overflow-hidden relative">
+              <img src="https://cdn.forgeautomotive.media/images/ed72g2cx/production/4b2a445e4ebfd63274e5a61a0d4bc62c72fbf518-2880x1800.jpg?auto=format&fit=max&w=1200" alt="VW Transporter T6.1" class="w-full h-full object-cover">
+              <div class="absolute top-4 left-4 right-4 flex justify-between items-center">
+                <span class="bg-black/80 px-2.5 py-1 font-mono text-xs text-[#C5A064] border border-white/10">#AL004</span>
+                <span class="bg-amber-950 text-amber-300 border border-amber-500/30 px-2.5 py-1 font-mono text-[10px] uppercase">Coming Soon</span>
+              </div>
+              <span class="absolute bottom-4 left-4 font-serif text-xl font-bold text-white bg-black/70 px-3 py-1">Register Interest</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-serif text-2xl text-white mb-2">VW Transporter T6.1</h3>
+              <p class="text-xs text-white/60 font-light leading-relaxed mb-4">This build will be available soon. Check back for updates or secure your allocation early.</p>
+              <button onclick="switchTab('contact')" class="btn-luxury text-xs py-2 px-5">Register Interest</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Define Your Specification Form -->
+    <section class="py-24 bg-[#0C0C0C]" id="contact">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase font-mono tracking-[0.25em] text-[#C5A064] block mb-3">Commissioning Intake</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-4">Define Your Specification</h2>
+          <p class="text-white/60 font-light">Share your build details so we can prepare a tailored quote. We aim to respond within 1–3 business days.</p>
+        </div>
+
+        <form onsubmit="handleFormSubmit(event)" class="bg-[#141414] border border-white/15 p-8 sm:p-12 space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-[11px] font-mono uppercase tracking-widest text-white/70 mb-2">Full Name *</label>
+              <input type="text" required placeholder="John Doe" class="w-full bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A064]">
+            </div>
+            <div>
+              <label class="block text-[11px] font-mono uppercase tracking-widest text-white/70 mb-2">Preferred Contact *</label>
+              <select class="w-full bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A064]">
+                <option>Email</option>
+                <option>Phone</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-[11px] font-mono uppercase tracking-widest text-white/70 mb-2">Email Address *</label>
+              <input type="email" required placeholder="john.doe@example.com" class="w-full bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A064]">
+            </div>
+            <div>
+              <label class="block text-[11px] font-mono uppercase tracking-widest text-white/70 mb-2">Phone Number</label>
+              <input type="tel" placeholder="+44 3330 417 965" class="w-full bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A064]">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-[11px] font-mono uppercase tracking-widest text-white/70 mb-2">Vehicle Make / Model</label>
+              <input type="text" id="input-vehicle" placeholder="Land Rover Defender 110" class="w-full bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A064]">
+            </div>
+            <div>
+              <label class="block text-[11px] font-mono uppercase tracking-widest text-white/70 mb-2">Preferred Site</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="flex items-center gap-2 p-3 border border-white/20 bg-black text-xs cursor-pointer">
+                  <input type="radio" name="site" checked class="accent-[#C5A064]"> Yorkshire
+                </label>
+                <label class="flex items-center gap-2 p-3 border border-white/20 bg-black text-xs cursor-pointer">
+                  <input type="radio" name="site" class="accent-[#C5A064]"> North West
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-mono uppercase tracking-widest text-white/70 mb-2">Message (Optional)</label>
+            <textarea rows="4" placeholder="Tell us if you’re looking for something specific..." class="w-full bg-black border border-white/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-[#C5A064]"></textarea>
+          </div>
+
+          <div class="pt-4 flex items-center justify-between">
+            <span class="text-xs text-white/40">Response within 1-3 business days</span>
+            <button type="submit" class="btn-luxury btn-luxury-solid py-3 px-8 text-xs">Submit Specification</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="bg-[#080808] border-t border-white/10 py-16 px-6 sm:px-12">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="font-serif tracking-[0.3em] text-xl font-bold uppercase text-white">AUTOLUXE</span>
+        </div>
+        <p class="text-xs text-white/50 max-w-md font-light">Bespoke vehicles built on distinction, desire, and identity. Not simply to be modified.</p>
+        <p class="text-[11px] font-mono text-white/40 mt-2">+44 (0) 3330 417 965 • builds@autoluxe.co.uk</p>
+      </div>
+
+      <div class="flex flex-wrap gap-6 text-xs uppercase font-mono tracking-wider text-white/60">
+        <a href="#" onclick="switchTab('home')" class="hover:text-white">Home</a>
+        <a href="#" onclick="switchTab('builds')" class="hover:text-white">Builds</a>
+        <a href="#" onclick="switchTab('stock')" class="hover:text-white">Stock</a>
+        <a href="#" onclick="switchTab('contact')" class="hover:text-white">Contact</a>
+        <span class="text-white/20">|</span>
+        <span class="text-white/40">© 2026 Autoluxe Automotive Ltd</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Build Details -->
+  <div id="build-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-[#141414] border border-white/20 max-w-lg w-full p-8 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-white/60 hover:text-white text-xl">&times;</button>
+      <span id="modal-code" class="text-xs font-mono text-[#C5A064] tracking-widest block mb-1">#AL001</span>
+      <h3 id="modal-title" class="font-serif text-3xl text-white mb-4">Defender 110</h3>
+      <div class="space-y-3 text-xs text-white/70 font-light border-y border-white/10 py-4 my-4">
+        <p><strong class="text-white font-medium">Exterior:</strong> <span id="modal-ext"></span></p>
+        <p><strong class="text-white font-medium">Wheels:</strong> <span id="modal-wheels"></span></p>
+        <p><strong class="text-white font-medium">Exhaust:</strong> <span id="modal-exhaust"></span></p>
+      </div>
+      <button onclick="closeModal(); switchTab('contact');" class="w-full btn-luxury btn-luxury-solid py-2.5 text-xs text-center">Commission Similar Build</button>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      if (tabId === 'contact') {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      } else if (tabId === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert('Showing view: ' + tabId.toUpperCase() + ' (Full version available via React app in the same folder)');
+      }
+    }
+
+    function openModal(title, code, ext, wheels, exhaust) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-code').innerText = code;
+      document.getElementById('modal-ext').innerText = ext;
+      document.getElementById('modal-wheels').innerText = wheels;
+      document.getElementById('modal-exhaust').innerText = exhaust;
+      document.getElementById('build-modal').classList.remove('hidden');
+      document.getElementById('build-modal').classList.add('flex');
+    }
+
+    function closeModal() {
+      document.getElementById('build-modal').classList.add('hidden');
+      document.getElementById('build-modal').classList.remove('flex');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Specification submitted successfully to Autoluxe Automotive Atelier! Reference: AL-SPEC-849201');
+    }
+  </script>
+</body>
+</html>
